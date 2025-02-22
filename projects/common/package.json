@@ -1,0 +1,51 @@
+{
+	"name": "@example/common",
+	"type": "module",
+	"description": "example common project",
+	"author": "Sean",
+	"engines": {
+		"node": ">=22.0.0",
+		"yarn": ">=4.0.0"
+	},
+	"private": true,
+	"license": "UNLICENSED",
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 10"
+	],
+	"dependencies": {
+		"@reduxjs/toolkit": "^2.5.0",
+		"@tanstack/react-query": "^5.63.0",
+		"axios": "^1.7.9",
+		"dayjs": "^1.11.13",
+		"lodash": "^4.17.21",
+		"react": "^18.3.1",
+		"react-cookie": "^7.2.2",
+		"react-dom": "^18.3.1",
+		"react-error-boundary": "^4.1.2",
+		"react-hook-form": "^7.54.2",
+		"react-lazy-load": "^4.0.1",
+		"react-redux": "^9.2.0",
+		"react-router-dom": "^6.28.1",
+		"redux": "^5.0.1",
+		"redux-logger": "^3.0.6",
+		"redux-persist": "^6.0.0"
+	},
+	"devDependencies": {
+		"@tanstack/react-query-devtools": "^5.63.0",
+		"@types/lodash": "^4.17.14",
+		"@types/node": "^22.10.5",
+		"@types/prop-types": "^15.7.14",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"@types/redux-logger": "^3.0.13",
+		"@types/redux-persist": "^4.3.1",
+		"@vitejs/plugin-react-swc": "^3.7.2",
+		"typescript": "^5.7.3",
+		"vite": "^6.0.7",
+		"vite-plugin-remove-console": "^2.2.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"web-vitals": "^4.2.4"
+	}
+}

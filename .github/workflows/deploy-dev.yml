@@ -1,0 +1,61 @@
+name: deploy-dev
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches:
+      - deploy-dev
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# https://docs.github.com/ko/actions/using-jobs/using-a-matrix-for-your-jobs
+jobs:
+  build-and-deploy-matrix:
+    strategy:
+      matrix:
+        name: [main]
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    env:
+      SSH_KEY: ${{ secrets.DEV_SSH_KEY }}
+      HOST: ${{ secrets.DEV_HOST }}
+      USER: ${{ secrets.DEV_USER }}
+
+    steps:
+      - name: Checking directory in instance
+        uses: appleboy/ssh-action@master
+        with:
+          key: ${{ secrets.DEV_SSH_KEY }}
+          host: ${{ secrets.DEV_HOST }}
+          username: ${{ secrets.DEV_USER }}
+          script: |
+            [ -d ~/#######/${{matrix.name}} ] && echo "${{matrix.name}} exists" || mkdir -p ~/#######/${{matrix.name}}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Filter by Paths
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            common:
+              - 'projects/common/**'
+            main:
+              - 'projects/main/**'
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.1.0"
+
+      - name: Build and Deploy ${{matrix.name}}Service
+        if: steps.changes.outputs.common == 'true' || steps.changes.outputs[matrix.name] == 'true'
+        run: |
+          yarn install --immutable
+          yarn ${{matrix.name}} build:dev
+          mkdir ~/.ssh
+          echo "$SSH_KEY" >> ~/.ssh/github-action
+          chmod 400 ~/.ssh/github-action
+          echo -e "Host github-actions\n\tUser "$USER"\n\tHostname "$HOST"\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
+          rsync -avzr --delete projects/${{matrix.name}}/dist/ github-actions:~/#######/${{matrix.name}}/

@@ -1,0 +1,48 @@
+{
+	"name": "yarn-berry-vite-react-typescript",
+	"version": "1.1.0",
+	"description": "Yarn Berry 모노레포 프론트엔드 프레임워크",
+	"author": "Sean",
+	"engines": {
+		"node": ">=22.0.0",
+		"yarn": ">=4.0.0"
+	},
+	"private": true,
+	"license": "UNLICENSED",
+	"packageManager": "yarn@4.6.0",
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 10"
+	],
+	"workspaces": {
+		"packages": [
+			"projects/*"
+		]
+	},
+	"scripts": {
+		"gitconfig": "git config --local include.path ../.gitconfig",
+		"lint": "eslint . --report-unused-disable-directives",
+		"dev": "yarn install && concurrently \"yarn main dev\"",
+		"start": "yarn install && concurrently \"yarn main preview\"",
+		"common": "yarn workspace @example/common",
+		"main": "yarn workspace @example/main"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@tanstack/eslint-plugin-query": "^5.62.16",
+		"@types/eslint__js": "^8.42.3",
+		"concurrently": "^9.1.2",
+		"corepack": "^0.30.0",
+		"eslint": "^9.17.0",
+		"eslint-plugin-jsdoc": "^50.6.1",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-react": "^7.37.3",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-refresh": "^0.4.16",
+		"eslint-plugin-regexp": "^2.7.0",
+		"globals": "^15.14.0",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.19.1"
+	}
+}
