@@ -1,5 +1,5 @@
 import React from "react";
-import useUser from "../../store/reduxHooks/useUser";
+import useUser from "@common/store/reduxHooks/useUser";
 
 const Header = () => {
 	const { user } = useUser();

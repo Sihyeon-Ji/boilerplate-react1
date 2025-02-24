@@ -1,42 +1,44 @@
 {
 	"compilerOptions": {
 		/** 기본 옵션 */
-		"target": "ES2023", // 컴파일된 JavaScript의 ECMAScript 버전.
-		"module": "ES2022", // TypeScript가 생성할 JavaScript 모듈 시스템을 지정
-		"lib": ["ES2023", "ESNext", "DOM", "DOM.Iterable"], // 사용할 라이브러리.
-		"noEmit": true, // 컴파일 시 출력 파일을 생성하지 않음.
+		"target": "ESNext", // 컴파일된 JavaScript의 ECMAScript 버전.
+		"module": "ESNext", // TypeScript가 생성할 JavaScript 모듈 시스템을 지정
+		"lib": ["ES2024", "ESNext", "DOM", "DOM.Iterable"], // 사용할 라이브러리.
 		"allowJs": true, // JavaScript 파일을 TypeScript로 처리할 수 있도록 허용.
 		"checkJs": true, // JavaScript 파일에 대한 타입 검사 활성화 (VSCode에서 오류 경고 및 코드 완성 기능 향상)
 		"removeComments": true, // 컴파일된 파일에서 주석을 제거.
-		"isolatedModules": true, // 각 파일을 독립적인 모듈로 처리하여, 모듈 간의 의존성을 최소화.
 		//"outDir": "./dist", // 컴파일된 파일의 출력 디렉토리. vite이 알아서 할것임
 		"sourceMap": true, // 소스 맵 파일을 생성하여 디버깅을 용이하게 함.
-		"moduleDetection": "force", // 모듈 감지를 강제로 수행.
-		"jsx": "react-jsx", // React JSX 구문을 사용하도록 설정 (React 17+에서는 자동으로 JSX를 지원)
 
 		/** 고급 옵션 */
 		"skipLibCheck": true, // 라이브러리 파일의 타입 검사를 건너뜀.
 		"forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성을 강제.
 		"useDefineForClassFields": true, // 클래스 필드 정의를 위한 새로운 문법 사용.
-		"allowImportingTsExtensions": true, // .ts 확장자를 가진 파일을 가져오는 것을 허용.
 		"allowSyntheticDefaultImports": true, // 기본 내보내기가 없는 모듈에서 기본 가져오기를 허용.
 
-		/** 모듈 분석 옵션 - 번들러 */
+		/** 모듈 분석 옵션 - Bundler mode */
 		"moduleResolution": "Bundler", // 모듈 해석 전략을 Bundler로 설정.
-		"baseUrl": "../", // 기본 경로를 현재 프로젝트의 루트로 설정 (상대 경로 대신 별칭 사용 가능)
-		"paths": {
-			"@common/*": ["./common/*"] // '@common' 별칭을 'common' 폴더로 설정 (모듈 경로 참조 시 간단하게 사용 가능)
-		},
+		"allowImportingTsExtensions": true, // .ts 확장자를 가진 파일을 가져오는 것을 허용.
+		"isolatedModules": true, // 각 파일을 독립적인 모듈로 처리하여, 모듈 간의 의존성을 최소화.
+		"moduleDetection": "force", // 모듈 감지를 강제로 수행.
+		"noEmit": true, // 컴파일 시 출력 파일을 생성하지 않음.
+		"jsx": "react-jsx", // React JSX 구문을 사용하도록 설정 (React 17+에서는 자동으로 JSX를 지원)
 		"resolveJsonModule": true, // JSON 파일을 모듈로 가져올 수 있도록 허용.
 		"esModuleInterop": true, // CommonJS 모듈과 ES 모듈 간의 상호 운용성을 허용.
 
-		/** 검사 옵션 */
+		/** Linting 검사 옵션 */
 		"strict": true, // 모든 엄격한 타입 검사 옵션을 활성화.
 		"noImplicitAny": false, // 암시적 'any' 타입을 허용. 기본적으로는 true로 설정하는 것이 좋음.
 		"strictNullChecks": true, // null 및 undefined에 대한 엄격한 검사 활성화.
 		"noImplicitThis": true, // 암시적 'this' 타입을 허용하지 않음.
 		"noUnusedLocals": false, // 사용하지 않는 지역 변수를 허용.
 		"noUnusedParameters": false, // 사용하지 않는 매개변수를 허용.
-		"noFallthroughCasesInSwitch": true // switch 문에서 fallthrough 케이스를 허용하지 않음.
+		"noFallthroughCasesInSwitch": true, // switch 문에서 fallthrough 케이스를 허용하지 않음.
+
+		/* Paths */
+		"baseUrl": ".", // 기본 경로
+		"paths": {
+			"@common/*": ["./src/*"] // '@common' 별칭을 './src' 폴더로 설정
+		}
 	}
 }

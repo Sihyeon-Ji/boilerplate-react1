@@ -1,6 +1,6 @@
-import { signOut } from "../api/authApi";
+import { signOut } from "@common/api/authApi";
 import axios, { AxiosError, AxiosResponse } from "axios";
-import { persistor } from "../store/redux";
+import { persistor } from "@common/store/redux";
 
 export const axiosInstance = axios.create({
 	timeout: 2 * 60 * 1000, // 2분

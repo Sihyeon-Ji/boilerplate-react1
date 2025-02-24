@@ -1,5 +1,5 @@
-import { axiosInstance } from "../config/axiosConfig";
-import { SignInReq } from "../types/user";
+import { axiosInstance } from "@common/config/axiosConfig";
+import { SignInReq } from "@common/types/user";
 
 /**
  * SECTION 공통 > 인증

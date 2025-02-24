@@ -1,11 +1,19 @@
+import path from "path";
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 import tsconfigPaths from "vite-tsconfig-paths";
 import removeConsole from "vite-plugin-remove-console";
 
 export default () => {
 	return defineConfig({
-		plugins: [react(), tsconfigPaths(), removeConsole()],
+		plugins: [react(), tailwindcss(), tsconfigPaths(), removeConsole()],
+		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "./src"),
+				"@common": path.resolve(__dirname, "../common/src"),
+			},
+		},
 		server: {
 			hmr: {
 				overlay: false,

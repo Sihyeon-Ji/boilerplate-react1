@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import useLoading from "@common/src/store/reduxHooks/useLoading";
+import useLoading from "@common/store/reduxHooks/useLoading";
 import LoadingSpinner from "./LoadingSpinner";
 
 interface LoadingContainerProps {

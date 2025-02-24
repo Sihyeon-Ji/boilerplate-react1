@@ -1,9 +1,11 @@
 import { Component, ErrorInfo, ReactNode } from "react";
-import { ErrorFallbackProps } from "../AsyncContainers/ErrorFallback";
 
 interface ErrorBoundaryProps {
 	children?: ReactNode;
-	errorFallback(props: ErrorFallbackProps): JSX.Element;
+	errorFallback(props: {
+		error: Error;
+		resetBoundary: () => void;
+	}): JSX.Element;
 	resetHandler: () => void;
 	setError: () => void;
 }

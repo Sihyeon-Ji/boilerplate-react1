@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "@common/src/components/Header/Header";
-import Footer from "@common/src/components/Footer/Footer";
-import useUser from "@common/src/store/reduxHooks/useUser";
+import Header from "@common/components/Header/Header";
+import Footer from "@common/components/Footer/Footer";
+import useUser from "@common/store/reduxHooks/useUser";
+import { Button } from "@common/components/ui/button";
 
 const Main = () => {
 	const { user } = useUser();
@@ -12,6 +13,9 @@ const Main = () => {
 			<div>
 				<h1>Main</h1>
 				<h2>{user?.name}</h2>
+				<Button variant="default" className="bg-red-500">
+					Click me
+				</Button>
 			</div>
 			<Footer />
 		</div>

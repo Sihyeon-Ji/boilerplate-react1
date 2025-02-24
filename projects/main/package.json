@@ -15,14 +15,14 @@
 		"not ie <= 10"
 	],
 	"scripts": {
-		"dev": "vite --port 4001 --open",
+		"dev": "vite --port 4000 --open",
 		"build": "cross-env CI=false tsc && vite build --mode .local",
 		"build:dev": "cross-env CI=false tsc && vite build --mode dev",
 		"build:prod": "cross-env CI=false tsc && vite build --mode prod",
-		"preview": "yarn build && vite preview --port 4001 --open"
+		"preview": "yarn build && vite preview --port 4000 --open"
 	},
 	"dependencies": {
-		"@example/common": "workspace:*",
+		"@tailwindcss/vite": "^4.0.8",
 		"@tanstack/react-query": "^5.63.0",
 		"axios": "^1.7.9",
 		"react": "^18.3.1",
@@ -32,7 +32,8 @@
 		"react-redux": "^9.2.0",
 		"react-router-dom": "^6.28.1",
 		"redux": "^5.0.1",
-		"redux-persist": "^6.0.0"
+		"redux-persist": "^6.0.0",
+		"tailwindcss": "^4.0.8"
 	},
 	"devDependencies": {
 		"@tanstack/react-query-devtools": "^5.63.0",

@@ -2,9 +2,20 @@
 	// Node.js 환경에서 TypeScript 프로젝트의 설정을 정의하는 파일
 	"compilerOptions": {
 		"composite": true, // 이 프로젝트가 다른 프로젝트에 의해 참조될 수 있도록 설정. 프로젝트 간의 의존성을 관리하는 데 유용.
+		"target": "ESNext", // 컴파일된 JavaScript의 ECMAScript 버전.
+		"lib": ["ES2024"], // 사용할 라이브러리.
+		"module": "ESNext", // TypeScript가 생성할 JavaScript 모듈 시스템을 지정
 		"skipLibCheck": true, // 라이브러리 파일의 타입 검사를 건너뜀. 이 옵션을 사용하면 컴파일 속도가 빨라질 수 있지만, 타입 안전성이 떨어질 수 있음.
-		"module": "ES2022", // TypeScript가 생성할 JavaScript 모듈 시스템을 지정
-		"moduleResolution": "Bundler", // 모듈 해석 전략을 Bundler로 설정. 이 설정은 모듈을 찾는 방식을 정의.
-		"allowSyntheticDefaultImports": true // CommonJS 모듈을 ES 모듈처럼 가져올 수 있도록 허용. 이 옵션을 사용하면 ES 모듈의 기본 가져오기를 사용할 수 있음.
+
+		/*모듈 분석 옵션 - Bundler mode */
+		"moduleResolution": "bundler", // 모듈 해석 전략을 Bundler로 설정. 이 설정은 모듈을 찾는 방식을 정의.
+		"isolatedModules": true, // 각 파일을 독립적인 모듈로 처리하여, 모듈 간의 의존성을 최소화.
+		"moduleDetection": "force", // 모듈 감지를 강제로 수행.
+
+		/* Linting 검사 옵션 */
+		"strict": true, // 모든 엄격한 타입 검사 옵션을 활성화.
+		"noUnusedLocals": false, // 사용하지 않는 지역 변수를 허용.
+		"noUnusedParameters": false, // 사용하지 않는 매개변수를 허용.
+		"noFallthroughCasesInSwitch": true // switch 문에서 fallthrough 케이스를 허용하지 않음.
 	}
 }

@@ -1,10 +1,12 @@
 import React, { ReactNode, Suspense, useCallback } from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import { ErrorFallbackProps } from "../AsyncContainers/ErrorFallback";
-import useError from "../../store/reduxHooks/useError";
+import useError from "@common/store/reduxHooks/useError";
 
 export interface AsyncBoundaryProps {
-	errorFallback(props: ErrorFallbackProps): JSX.Element;
+	errorFallback(props: {
+		error: Error;
+		resetBoundary: () => void;
+	}): JSX.Element;
 	suspenseFallback: ReactNode;
 	children: ReactNode;
 }

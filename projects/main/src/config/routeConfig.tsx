@@ -1,41 +1,38 @@
-import SignedInContainer from "@seodalgo/common/src/components/ConfigContainers/RouteContainers/SignedInContainer";
-import SignedOutContainer from "@seodalgo/common/src/components/ConfigContainers/RouteContainers/SignedOutContainer";
+import SignedInContainer from "@common/containers/RouteContainers/SignedInContainer";
+import SignedOutContainer from "@common/containers/RouteContainers/SignedOutContainer";
 import React, { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import type { RouteType } from "@seodalgo/common/src/types/urls";
-import URLs from "@seodalgo/common/src/config/URLConfig";
+import type { RouteType } from "@common/types/urls";
+import URLs from "@common/config/URLConfig";
 
 // 코드 스플리팅을 위한 lazy import
 // Common 공통
 const InvalidApproach = lazy(
-	() =>
-		import(
-			"@seodalgo/common/src/components/ConfigContainers/RouteContainers/InvalidApproach"
-		),
+	() => import("@common/containers/RouteContainers/InvalidApproach"),
 );
 
 // Main 메인
-const Main = lazy(() => import("pages/Main/Main"));
-const SignIn = lazy(() => import("pages/SignIn/SignIn"));
-const SignUp = lazy(() => import("pages/SignUp/SignUp"));
+const Main = lazy(() => import("@/pages/Main/Main"));
+const SignIn = lazy(() => import("@/pages/SignIn/SignIn"));
+const SignUp = lazy(() => import("@/pages/SignUp/SignUp"));
 
 const routes: RouteType[] = [
 	{
 		id: "main",
 		path: URLs.Main,
-		routeCondition: "SIGNED_IN",
+		routeCondition: "WHENEVER",
 		component: Main,
 	},
 	{
 		id: "sign-in",
 		path: URLs.SignIn,
-		routeCondition: "SIGNED_OUT",
+		routeCondition: "WHENEVER",
 		component: SignIn,
 	},
 	{
 		id: "sign-up",
 		path: URLs.SignUp,
-		routeCondition: "SIGNED_OUT",
+		routeCondition: "WHENEVER",
 		component: SignUp,
 	},
 ];

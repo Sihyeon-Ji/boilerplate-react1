@@ -1,5 +1,5 @@
 import { LazyExoticComponent, MemoExoticComponent } from "react";
-import URLs from "../config/URLConfig";
+import URLs from "@common/config/URLConfig";
 
 type URLKeys = keyof typeof URLs;
 type URLPaths = (typeof URLs)[URLKeys];

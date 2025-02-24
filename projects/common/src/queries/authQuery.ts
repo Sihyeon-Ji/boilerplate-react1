@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
-import { signIn, signOut } from "../api/authApi";
-import useUser from "../store/reduxHooks/useUser";
+import { signIn, signOut } from "@common/api/authApi";
+import useUser from "@common/store/reduxHooks/useUser";
 import { useNavigate } from "react-router-dom";
 
 /**

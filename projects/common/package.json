@@ -15,11 +15,16 @@
 		"not ie <= 10"
 	],
 	"dependencies": {
+		"@radix-ui/react-slot": "^1.1.2",
 		"@reduxjs/toolkit": "^2.5.0",
+		"@tailwindcss/vite": "^4.0.8",
 		"@tanstack/react-query": "^5.63.0",
 		"axios": "^1.7.9",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
 		"dayjs": "^1.11.13",
 		"lodash": "^4.17.21",
+		"lucide-react": "^0.475.0",
 		"react": "^18.3.1",
 		"react-cookie": "^7.2.2",
 		"react-dom": "^18.3.1",
@@ -30,7 +35,10 @@
 		"react-router-dom": "^6.28.1",
 		"redux": "^5.0.1",
 		"redux-logger": "^3.0.6",
-		"redux-persist": "^6.0.0"
+		"redux-persist": "^6.0.0",
+		"tailwind-merge": "^3.0.2",
+		"tailwindcss": "^4.0.8",
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@tanstack/react-query-devtools": "^5.63.0",
