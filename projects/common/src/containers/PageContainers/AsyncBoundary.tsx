@@ -1,4 +1,4 @@
-import React, { ReactNode, Suspense, useCallback } from "react";
+import React, { JSX, ReactNode, Suspense, useCallback } from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import useError from "@common/store/reduxHooks/useError";
 

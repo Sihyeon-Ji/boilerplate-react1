@@ -7,6 +7,7 @@ import { CookiesProvider } from "react-cookie";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import PageContainer from "@common/containers/PageContainers/PageContainer";
 import AsyncContainer from "@common/containers/AsyncContainers/AsyncContainer";
+import "@common/styles/index.css";
 
 const App = () => {
 	return (

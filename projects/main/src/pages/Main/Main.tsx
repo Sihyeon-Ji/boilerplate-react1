@@ -1,52 +1,49 @@
 import React from "react";
-import Header from "@common/components/Header/Header";
-import Footer from "@common/components/Footer/Footer";
 import useUser from "@common/store/reduxHooks/useUser";
-import { Button } from "@common/components/ui/button";
 import {
-	Accordion,
-	AccordionItem,
-	AccordionTrigger,
-	AccordionContent,
-} from "@common/components/ui/accordion";
+	Card,
+	CardContent,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@common/components/ui/card";
+import { Input } from "@common/components/ui/input";
+import { Label } from "@common/components/ui/label";
+import { Switch } from "@common/components/ui/switch";
+import { Button } from "@common/components/ui/button";
+import { Checkbox } from "@common/components/ui/checkbox";
 
 const Main = () => {
 	const { user } = useUser();
 
 	return (
-		<div className="mui-content">
-			<Header />
-			<div>
-				<h1>Main</h1>
+		<>
+			<main className="flex h-screen w-screen items-center justify-center">
 				<h2>{user?.name}</h2>
-				<Button variant="default" className="bg-red-500">
-					Click me
-				</Button>
-				<Accordion type="single" collapsible className="w-full">
-					<AccordionItem value="item-1">
-						<AccordionTrigger>Is it accessible?</AccordionTrigger>
-						<AccordionContent>
-							Yes. It adheres to the WAI-ARIA design pattern.
-						</AccordionContent>
-					</AccordionItem>
-					<AccordionItem value="item-2">
-						<AccordionTrigger>Is it styled?</AccordionTrigger>
-						<AccordionContent>
-							Yes. It comes with default styles that matches the other
-							components&apos; aesthetic.
-						</AccordionContent>
-					</AccordionItem>
-					<AccordionItem value="item-3">
-						<AccordionTrigger>Is it animated?</AccordionTrigger>
-						<AccordionContent>
-							{`Yes. It's animated by default, but you can disable it if you`}
-							prefer.
-						</AccordionContent>
-					</AccordionItem>
-				</Accordion>
-			</div>
-			<Footer />
-		</div>
+				<Card className="w-[30rem]">
+					<CardHeader>
+						<CardTitle>로그인</CardTitle>
+					</CardHeader>
+					<CardContent className="flex flex-col gap-y-2 pb-4">
+						<Input placeholder="아이디를 입력하세요." />
+						<Input placeholder="비밀번호를 입력하세요." type="password" />
+					</CardContent>
+					<CardFooter className="block">
+						<div className="mb-2 flex w-full justify-between">
+							<div className="flex items-center space-x-2">
+								<Checkbox id="keep" />
+								<Label htmlFor="keep">로그인 유지하기</Label>
+							</div>
+							<div className="flex items-center space-x-2">
+								<Label htmlFor="id-security">IP 보안</Label>
+								<Switch id="ip-security" />
+							</div>
+						</div>
+						<Button className="w-full">로그인</Button>
+					</CardFooter>
+				</Card>
+			</main>
+		</>
 	);
 };
 

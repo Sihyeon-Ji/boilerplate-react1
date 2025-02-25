@@ -1,4 +1,4 @@
-import { LazyExoticComponent, MemoExoticComponent } from "react";
+import { JSX, LazyExoticComponent, MemoExoticComponent } from "react";
 import URLs from "@common/config/URLConfig";
 
 type URLKeys = keyof typeof URLs;
