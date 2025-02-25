@@ -417,6 +417,7 @@ __metadata:
     redux: "npm:^5.0.1"
     redux-persist: "npm:^6.0.0"
     tailwindcss: "npm:^4.0.8"
+    tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5.7.3"
     vite: "npm:^6.2.0"
     vite-plugin-remove-console: "npm:^2.2.0"

@@ -550,6 +550,7 @@ const RAW_RUNTIME_STATE =
           ["redux", "npm:5.0.1"],\
           ["redux-persist", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:6.0.0"],\
           ["tailwindcss", "npm:4.0.8"],\
+          ["tailwindcss-animate", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:1.0.7"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["vite", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:6.2.0"],\
           ["vite-plugin-remove-console", "npm:2.2.0"],\

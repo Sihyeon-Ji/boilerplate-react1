@@ -8,6 +8,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import PageContainer from "@common/containers/PageContainers/PageContainer";
 import AsyncContainer from "@common/containers/AsyncContainers/AsyncContainer";
 import "@common/styles/index.css";
+import { ThemeProvider } from "@common/components/theme-provider";
 
 const App = () => {
 	return (
@@ -16,7 +17,9 @@ const App = () => {
 				<LoadingContainer>
 					<PageContainer>
 						<AsyncContainer>
-							<PageRoutes />
+							<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+								<PageRoutes />
+							</ThemeProvider>
 						</AsyncContainer>
 					</PageContainer>
 				</LoadingContainer>

@@ -12,7 +12,7 @@ import { Label } from "@common/components/ui/label";
 import { Switch } from "@common/components/ui/switch";
 import { Button } from "@common/components/ui/button";
 import { Checkbox } from "@common/components/ui/checkbox";
-
+import { ModeToggle } from "@common/components/mode-toggle";
 const Main = () => {
 	const { user } = useUser();
 
@@ -42,6 +42,7 @@ const Main = () => {
 						<Button className="w-full">로그인</Button>
 					</CardFooter>
 				</Card>
+				<ModeToggle />
 			</main>
 		</>
 	);

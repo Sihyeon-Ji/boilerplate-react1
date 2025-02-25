@@ -17,7 +17,7 @@
 		"allowSyntheticDefaultImports": true, // 기본 내보내기가 없는 모듈에서 기본 가져오기를 허용.
 
 		/** 모듈 분석 옵션 - Bundler mode */
-		"moduleResolution": "Bundler", // 모듈 해석 전략을 Bundler로 설정.
+		"moduleResolution": "bundler", // 모듈 해석 전략을 Bundler로 설정.
 		"allowImportingTsExtensions": true, // .ts 확장자를 가진 파일을 가져오는 것을 허용.
 		"isolatedModules": true, // 각 파일을 독립적인 모듈로 처리하여, 모듈 간의 의존성을 최소화.
 		"moduleDetection": "force", // 모듈 감지를 강제로 수행.
