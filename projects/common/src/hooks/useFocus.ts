@@ -16,11 +16,11 @@ const useFocus = (defaultFocused = false) => {
 		}
 
 		instance?.addEventListener("focus", onFocus);
-		instance?.addEventListener("blur", onBlur);
+		instance?.addEventListener("blur-sm", onBlur);
 
 		return () => {
 			instance?.removeEventListener("focus", onFocus);
-			instance?.removeEventListener("blur", onBlur);
+			instance?.removeEventListener("blur-sm", onBlur);
 		};
 	}, [isFocused]);
 

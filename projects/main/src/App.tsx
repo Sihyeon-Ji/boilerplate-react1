@@ -17,7 +17,7 @@ const App = () => {
 				<LoadingContainer>
 					<PageContainer>
 						<AsyncContainer>
-							<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+							<ThemeProvider>
 								<PageRoutes />
 							</ThemeProvider>
 						</AsyncContainer>
