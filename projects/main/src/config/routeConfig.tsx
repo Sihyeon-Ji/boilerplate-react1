@@ -1,14 +1,15 @@
-import SignedInContainer from "@common/containers/RouteContainers/SignedInContainer";
-import SignedOutContainer from "@common/containers/RouteContainers/SignedOutContainer";
+import SignedInContainer from "@common/containers/PageContainers/SignedInContainer";
+import SignedOutContainer from "@common/containers/PageContainers/SignedOutContainer";
 import React, { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import type { RouteType } from "@common/types/urls";
 import URLs from "@common/config/URLConfig";
+import SidebarContainer from "@common/containers/SidebarContainers/SidebarContainer";
 
 // 코드 스플리팅을 위한 lazy import
 // Common 공통
 const InvalidApproach = lazy(
-	() => import("@common/containers/RouteContainers/InvalidApproach"),
+	() => import("@common/containers/PageContainers/InvalidApproach"),
 );
 
 // Main 메인
@@ -51,7 +52,9 @@ const PageRoutes = () => {
 									path={path}
 									element={
 										<div id={id}>
-											<Component />
+											<SidebarContainer>
+												<Component />
+											</SidebarContainer>
 										</div>
 									}
 								/>

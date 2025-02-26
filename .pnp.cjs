@@ -494,7 +494,6 @@ const RAW_RUNTIME_STATE =
           ["input-otp", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:1.4.2"],\
           ["lodash", "npm:4.17.21"],\
           ["lucide-react", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:0.475.0"],\
-          ["next-themes", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:0.4.4"],\
           ["react", "npm:19.0.0"],\
           ["react-cookie", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:7.2.2"],\
           ["react-day-picker", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:9.5.1"],\
@@ -7380,32 +7379,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/negotiator-npm-0.6.3-9d50e36171-2723fb822a.zip/node_modules/negotiator/",\
         "packageDependencies": [\
           ["negotiator", "npm:0.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["next-themes", [\
-      ["npm:0.4.4", {\
-        "packageLocation": "./.yarn/cache/next-themes-npm-0.4.4-f8e3b20503-f70bad0f7b.zip/node_modules/next-themes/",\
-        "packageDependencies": [\
-          ["next-themes", "npm:0.4.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:0.4.4", {\
-        "packageLocation": "./.yarn/__virtual__/next-themes-virtual-4a6a7a0852/0/cache/next-themes-npm-0.4.4-f8e3b20503-f70bad0f7b.zip/node_modules/next-themes/",\
-        "packageDependencies": [\
-          ["next-themes", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:0.4.4"],\
-          ["@types/react", "npm:19.0.10"],\
-          ["@types/react-dom", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:19.0.4"],\
-          ["react", "npm:19.0.0"],\
-          ["react-dom", "virtual:0876b95f445fe9762c67075a7cd24baa8efb3c650e52f77ae75f77ba9b2ea651a45be902418ce5cb6d5748046b214e9736a17618217d0b1ba32603a731fff679#npm:19.0.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react-dom",\
-          "@types/react",\
-          "react-dom",\
-          "react"\
         ],\
         "linkType": "HARD"\
       }]\

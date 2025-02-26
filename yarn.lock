@@ -363,7 +363,6 @@ __metadata:
     input-otp: "npm:^1.4.2"
     lodash: "npm:^4.17.21"
     lucide-react: "npm:^0.475.0"
-    next-themes: "npm:^0.4.4"
     react: "npm:^19.0.0"
     react-cookie: "npm:^7.2.2"
     react-day-picker: "npm:^9.5.1"
@@ -6116,16 +6115,6 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: 10/2723fb822a17ad55c93a588a4bc44d53b22855bf4be5499916ca0cab1e7165409d0b288ba2577d7b029f10ce18cf2ed8e703e5af31c984e1e2304277ef979837
-  languageName: node
-  linkType: hard
-
-"next-themes@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "next-themes@npm:0.4.4"
-  peerDependencies:
-    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
-    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
-  checksum: 10/f70bad0f7b11281f4c2740f4d6fda48943349623b61d0958ed92672263f6f00001da497e26676ffc88e6e06b1a3fd6a81a79242efc410caee734aee948539ed7
   languageName: node
   linkType: hard
 

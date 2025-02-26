@@ -1,41 +1,24 @@
 import React from "react";
-import useUser from "@common/store/reduxHooks/useUser";
-
+import { DarkModeToggle } from "@common/containers/ThemeContainers/DarkModeToggle";
+import { SidebarTrigger } from "@common/components/ui/sidebar";
+import { Separator } from "@common/components/ui/separator";
+import { NavHeader } from "@common/components/ui/example/demos/nav-header";
 const Header = () => {
-	const { user } = useUser();
-
 	return (
-		<header className="header">
-			<div className="logo">
-				<a href="/">로고</a>
-			</div>
-
-			<nav className="nav">
-				<ul className="nav-list">
-					<li>
-						<a href="/about">소개</a>
-					</li>
-					<li>
-						<a href="/services">서비스</a>
-					</li>
-					<li>
-						<a href="/contact">문의하기</a>
-					</li>
-				</ul>
-			</nav>
-
-			<div className="user-info">
-				{user ? (
-					<>
-						<span>{user.name}님</span>
-						<a href="/profile">프로필</a>
-					</>
-				) : (
-					<a href="/sign-in">로그인</a>
-				)}
+		<header className="bg-background sticky inset-x-0 top-0 isolate z-10 flex shrink-0 items-center gap-2 border-b">
+			<div className="flex h-14 w-full items-center gap-2 px-4">
+				<SidebarTrigger className="-ml-1.5" />
+				<Separator
+					orientation="vertical"
+					className="mr-2 data-[orientation=vertical]:h-4"
+				/>
+				<NavHeader />
+				<div className="ml-auto flex items-center gap-2">
+					<DarkModeToggle />
+				</div>
 			</div>
 		</header>
 	);
 };
 
-export default Header;
+export default React.memo(Header);

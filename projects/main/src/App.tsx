@@ -6,23 +6,25 @@ import PageRoutes from "@/config/routeConfig";
 import { CookiesProvider } from "react-cookie";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import PageContainer from "@common/containers/PageContainers/PageContainer";
-import AsyncContainer from "@common/containers/AsyncContainers/AsyncContainer";
+import AsyncContainer from "@common/containers/PageContainers/AsyncContainer";
 import "@common/styles/index.css";
-import { ThemeProvider } from "@common/components/theme-provider";
+import { ThemeProvider } from "@common/containers/ThemeContainers/ThemeProvider";
+import { Toaster } from "@common/components/ui/sonner";
 
 const App = () => {
 	return (
 		<CookiesProvider>
 			<QueryClientProvider client={queryClient}>
-				<LoadingContainer>
-					<PageContainer>
-						<AsyncContainer>
-							<ThemeProvider>
+				<ThemeProvider>
+					<AsyncContainer>
+						<LoadingContainer>
+							<PageContainer>
 								<PageRoutes />
-							</ThemeProvider>
-						</AsyncContainer>
-					</PageContainer>
-				</LoadingContainer>
+								<Toaster />
+							</PageContainer>
+						</LoadingContainer>
+					</AsyncContainer>
+				</ThemeProvider>
 				<ReactQueryDevtools initialIsOpen={false} />
 			</QueryClientProvider>
 		</CookiesProvider>

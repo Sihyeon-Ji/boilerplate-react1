@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@common/components/ui/button";
 
-// 페이지 단위에서 사용할 에러바운더리의 fallback
+//ANCHOR - ErrorPage
+// 역할: ErrorFallback보다 더 상세한 에러 페이지, 네비게이션 기능 포함
 const ErrorPage = ({
 	error,
 	resetBoundary,
@@ -11,7 +11,6 @@ const ErrorPage = ({
 	error: any;
 	resetBoundary: () => void;
 }) => {
-	const navigate = useNavigate();
 	return (
 		<div id="error-page">
 			<div>
@@ -29,7 +28,7 @@ const ErrorPage = ({
 				</Button>
 				<Button
 					variant="default"
-					onClick={() => navigate(`/`)}
+					onClick={() => (location.href = "/")}
 					className="reset-button m-1"
 				>
 					메인으로
@@ -39,4 +38,4 @@ const ErrorPage = ({
 	);
 };
 
-export default React.memo(ErrorPage);
+export default ErrorPage;

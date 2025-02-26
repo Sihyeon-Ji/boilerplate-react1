@@ -1,10 +1,11 @@
 <!-- 헤더 -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=seodalgo%20total%20frontend&fontSize=70)
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=yarn%20berry%20monorepo%20frontend&fontSize=50)
 
 <div align=center>
+
 <h1> :boom: Introduction </h1>
 Yarn Berry를 사용한 모노레포 프론트엔드 프레임워크입니다.<br/>
-Vite, TypeScript, React, Redux, Sass, MUI를 사용한 프론트엔드 프레임워크입니다.<br/>
+Vite, TypeScript, Reactv19, Redux, TailwindCSSv4, Shadcn/UI를 사용한 프론트엔드 프레임워크입니다.<br/>
 <br/><br/>
 
 # :astonished: What's in it
@@ -14,10 +15,32 @@ Vite, TypeScript, React, Redux, Sass, MUI를 사용한 프론트엔드 프레임
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
   <img src="https://img.shields.io/badge/Redux-764ABC?style=flat&logo=Redux&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=Sass&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MUI-007FFF?style=flat&logo=MUI&logoColor=white"/>
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/tailwindcss-06B6D4?style=flat&logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/shadcnui-000000?style=flat&logo=shadcnui&logoColor=white"/>
 <br/><br/>
+
+# 🔧 VSCode 확장 프로그램
+
+프로젝트 개발을 위해 다음 VS Code 확장 프로그램을 설치해주세요:
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
+- [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ZipFS - a zip file system](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs)
+
+# ⚙️ Tailwind CSS 설정 관련 안내
+> **참고**: 이 설정은 모노레포 환경에서 Tailwind CSS v4가 모든 프로젝트의 소스 파일을 인식하도록 합니다.  
+> 자세한 내용은 [shadcn-ui/ui 토론](https://github.com/shadcn-ui/ui/discussions/6714#discussioncomment-12280129)을 참조하세요.
+```css
+@source "../../../**/src/**/*.{ts,tsx}";
+
+// ... existing code ...
+```
+projects/common/src/styles/index.css의 @source "../../../**/src/**/*.{ts,tsx}"; 코드에 대한 설명
+https://github.com/shadcn-ui/ui/discussions/6714#discussioncomment-12280129
+tailwindcss v4 in monorepo 에서는 해당 코드가 필요합니다.
 
 # 커밋 메시지 정의 [gitmoji](https://gitmoji.dev/)
 | 아이콘 |    설명    |    원문   |
