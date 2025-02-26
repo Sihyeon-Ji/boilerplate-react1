@@ -8,5 +8,5 @@
 			"@common/*": ["../common/src/*"] // '@common' 별칭을 '../common/src' 폴더로 설정
 		}
 	},
-	"include": ["src"]
+	"include": ["src", "../common/src/types/components.d.ts"]
 }

@@ -1,17 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
+	Button,
+	Checkbox,
+	Switch,
+	Label,
+	Input,
 	Card,
 	CardContent,
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@common/components/ui/card";
-import { Input } from "@common/components/ui/input";
-import { Label } from "@common/components/ui/label";
-import { Switch } from "@common/components/ui/switch";
-import { Button } from "@common/components/ui/button";
-import { Checkbox } from "@common/components/ui/checkbox";
+} from "@common/components/ui";
 
 const SignIn = () => {
 	const navigate = useNavigate();
