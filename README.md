@@ -20,6 +20,8 @@ Vite, TypeScript, Reactv19, Redux, TailwindCSSv4, Shadcn/UI를 사용한 프론�
   <img src="https://img.shields.io/badge/shadcnui-000000?style=flat&logo=shadcnui&logoColor=white"/>
 <br/><br/>
 
+</div>
+
 # 🔧 VSCode 확장 프로그램
 
 프로젝트 개발을 위해 다음 VS Code 확장 프로그램을 설치해주세요:
@@ -542,5 +544,3 @@ export default PageRoutes;
 |💸(:money_with_wings:)| |Add sponsorships or money related infrastructure.|
 |🧵(:thread:)| |Add or update code related to multithreading or concurrency.|
 |🦺(:safety_vest:)| |Add or update code related to validation.|
-
-</div>
