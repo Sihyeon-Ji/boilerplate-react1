@@ -1,6 +1,6 @@
 import { GalleryVerticalEnd } from "lucide-react";
 
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 import { Button } from "@common/components/ui/button";
 import { Input } from "@common/components/ui/input";
 import { Label } from "@common/components/ui/label";

@@ -1,6 +1,6 @@
 {
 	"name": "yarn-berry-vite-react-typescript",
-	"version": "1.1.0",
+	"version": "1.0.0",
 	"description": "Yarn Berry 모노레포 프론트엔드 프레임워크",
 	"author": "Sean",
 	"engines": {

@@ -4,7 +4,7 @@ import { VariantProps, cva } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 
 import { useIsMobile } from "@common/hooks/useIsMobile";
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 import { Button } from "@common/components/ui/button";
 import { Input } from "@common/components/ui/input";
 import { Separator } from "@common/components/ui/separator";

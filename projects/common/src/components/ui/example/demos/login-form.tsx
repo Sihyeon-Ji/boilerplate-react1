@@ -1,4 +1,4 @@
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 import { Button } from "@common/components/ui/button";
 import { Card, CardContent } from "@common/components/ui/card";
 import { Input } from "@common/components/ui/input";

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 
 export function ComponentWrapper({
 	className,

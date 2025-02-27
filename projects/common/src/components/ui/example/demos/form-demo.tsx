@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 import { Button } from "@common/components/ui/button";
 import { Calendar } from "@common/components/ui/calendar";
 import { Checkbox } from "@common/components/ui/checkbox";

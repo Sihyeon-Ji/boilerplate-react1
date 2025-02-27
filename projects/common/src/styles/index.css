@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @source "../../../**/src/**/*.{ts,tsx}";
 @plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
@@ -13,6 +12,7 @@
 	font-family: NotoSansMono;
 	src: url("../assets/fonts/NotoSansMono-Regular.ttf");
 }
+
 :root {
 	--background: hsl(180 8% 95%);
 	--foreground: hsl(180 8% 5%);
@@ -167,7 +167,8 @@
 	}
 }
 
-.theme-login {
+/* 예시 코드 */
+.theme-login-one {
 	--primary: #ce2a2d;
 	--primary-foreground: #fff;
 	--ring: #ce2a2d9c;
@@ -185,5 +186,35 @@
 	[data-slot="card"] {
 		border-radius: 0rem;
 		box-shadow: none;
+	}
+}
+.theme-login-two {
+	--primary: #035fa8;
+	--primary-foreground: #fff;
+	--ring: #035fa89c;
+	font-family: var(--font-serif);
+
+	a {
+		color: var(--primary);
+	}
+}
+.theme-login-three {
+	--primary: #22c55e;
+	--primary-foreground: #000;
+	--ring: #22c55e;
+	--radius: 1.5rem;
+
+	font-family: var(--font-manrope);
+
+	a {
+		color: var(--primary);
+	}
+
+	[data-slot="card"] {
+		@apply shadow-xl;
+	}
+
+	[data-slot="input"] {
+		@apply dark:bg-input;
 	}
 }

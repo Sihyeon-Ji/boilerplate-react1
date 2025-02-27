@@ -2,7 +2,7 @@ import * as React from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
-import { cn } from "@common/lib/utils";
+import { cn } from "@common/utils/utils";
 import { buttonVariants } from "@common/components/ui/button";
 
 function Calendar({
