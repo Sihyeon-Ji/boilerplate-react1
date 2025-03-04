@@ -1,3 +1,4 @@
+import { scan } from "react-scan";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -5,6 +6,10 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "@common/store/redux";
 // import reportWebVitals from '@common/reportWebVitals'
+
+scan({
+	enabled: import.meta.env.NODE_ENV !== "production",
+});
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement,
